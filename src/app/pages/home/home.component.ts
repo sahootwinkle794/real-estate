@@ -11,7 +11,6 @@ import { FeaturedComponent } from './components/featured/featured.component';
   imports: [
     CommonModule, 
     HeroComponent, 
-    
     RoomCategoriesComponent,
     FeaturedComponent  
   ],

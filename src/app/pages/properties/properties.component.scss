@@ -1,0 +1,81 @@
+$gold: #c5a059;
+$dark: #1a1a1a;
+
+.page-header{
+  background: linear-gradient(rgba($dark, 0.7), rgba($dark, 0.7)), 
+              url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80') !important;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  h1 { font-size: 3.5rem; }
+}
+.properties-page {
+  .page-header {
+    background: #f8f8f8;
+    padding: 60px 0;
+    text-align: center;
+    h1 { font-size: 2.5rem; margin-bottom: 10px; }
+  }
+
+  .content-area {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+
+    @media (max-width: 992px) { grid-template-columns: 1fr; }
+  }
+
+  .sidebar {
+    .filter-group {
+      margin-bottom: 30px;
+      h4 { border-bottom: 2px solid $gold; padding-bottom: 10px; margin-bottom: 15px; }
+      ul { list-style: none; padding: 0; 
+        li { padding: 8px 0; cursor: pointer; transition: 0.3s; &:hover { color: $gold; } }
+      }
+    }
+  }
+
+  .grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    &:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+    .image-box {
+      height: 200px;
+      position: relative;
+      img { width: 100%; height: 100%; object-fit: cover; }
+      .badge { position: absolute; top: 15px; left: 15px; background: $dark; color: #fff; padding: 4px 12px; font-size: 0.8rem; border-radius: 4px;
+        &.sale { background: $gold; }
+      }
+    }
+
+    .info {
+      padding: 20px;
+      .type { color: $gold; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+      h3 { margin: 5px 0; font-size: 1.25rem; }
+      .price { font-size: 1.4rem; font-weight: 700; color: $dark; margin-bottom: 15px; }
+      .meta { display: flex; gap: 15px; border-top: 1px solid #eee; padding-top: 15px; color: #777; font-size: 0.9rem; }
+    }
+  }
+}

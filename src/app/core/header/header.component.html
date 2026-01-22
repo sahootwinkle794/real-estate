@@ -1,0 +1,18 @@
+<header class="main-header">
+  <div class="container">
+    <div class="logo-area" routerLink="/">
+      <img [src]="logo" alt="Luminor Logo" class="logo">
+    </div>
+
+    <nav class="navigation">
+      <a *ngFor="let item of menus"
+         [routerLink]="item.path"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: item.path === '/'}">
+        {{ item.title }}
+      </a>
+      
+      <a routerLink="/" class="btn-contact" routerLinkActive="active-btn">Register Now</a>
+    </nav>
+  </div>
+</header>

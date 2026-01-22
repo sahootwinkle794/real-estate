@@ -1,0 +1,52 @@
+.hero-wrapper {
+    height: 70vh;
+    background: url('https://luminor-eight.vercel.app/images/home/home-1.jpg') center/cover no-repeat;
+
+    .hero-overlay {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .content {
+        text-align: center;
+
+        h1 {
+            font-size: 3.5rem;
+
+            span {
+                color: #c5a059;
+            }
+        }
+    }
+
+    .search-box {
+        background: white;
+        padding: 10px;
+        border: transparent;
+        border-radius: 50px;
+        display: flex;
+        margin-top: 20px;
+
+        input {
+            border: none;
+            padding: 10px 20px;
+            outline: none;
+            flex: 1;
+            border-radius: 50px;
+            margin-right: 20px;
+            
+        }
+        button {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    }
+}

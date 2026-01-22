@@ -1,0 +1,54 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1a1a1a;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: 0.3s;
+
+      &:hover, &.active {
+        color: #c5a059; // Gold accent
+      }
+    }
+
+    .btn-contact {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      
+      &:hover {
+        background: #c5a059;
+        color: #fff;
+      }
+    }
+  }
+}

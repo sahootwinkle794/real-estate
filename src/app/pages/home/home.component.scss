@@ -1,0 +1,29 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; // Prevents accidental horizontal scrolling
+}
+
+.page-section {
+  padding: 40px 0;
+  background-color: #ffffff; // Base background for the page
+  
+  // You can add global section constraints here
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+// Optional: Add a subtle fade-in animation for the whole page
+:host {
+  display: block;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

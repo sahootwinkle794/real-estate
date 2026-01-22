@@ -1,0 +1,57 @@
+<div class="properties-page">
+  <header class="page-header">
+    <div class="container">
+      <h1>Explore Our Listings</h1>
+      <p>Find the perfect space from our curated collection.</p>
+    </div>
+  </header>
+
+  <div class="container content-area">
+    <aside class="sidebar">
+      <div class="filter-group">
+        <h4>Property Type</h4>
+        <ul>
+          <li (click)="filterByType('All')">All Types</li>
+          <li (click)="filterByType('Villa')">Villas</li>
+          <li (click)="filterByType('Apartment')">Apartments</li>
+          <li (click)="filterByType('Office')">Offices</li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <h4>Price Range</h4>
+        <input type="range" min="100000" max="10000000" class="slider">
+      </div>
+    </aside>
+
+    <main class="results">
+      <div class="grid-header">
+        <p>Showing {{filteredProperties.length}} results</p>
+        <select class="sort-select">
+          <option>Newest First</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="property-grid">
+        <div class="card" *ngFor="let p of filteredProperties">
+          <div class="image-box">
+            <img [src]="p.img" [alt]="p.title">
+            <span class="badge" [ngClass]="p.status.toLowerCase()">For {{p.status}}</span>
+          </div>
+          <div class="info">
+            <span class="type">{{p.type}}</span>
+            <h3>{{p.title}}</h3>
+            <p class="price">{{p.price | currency:'USD':'symbol':'1.0-0'}}</p>
+            <div class="meta">
+              <span>🛏 {{p.beds}}</span>
+              <span>🚿 {{p.baths}}</span>
+              <span>📏 {{p.area}} sqft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

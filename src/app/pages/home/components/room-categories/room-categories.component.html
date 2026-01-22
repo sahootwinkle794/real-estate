@@ -1,0 +1,26 @@
+<section class="room-inspiration">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Lifestyle</span>
+      <h2>Inspiration by Room</h2>
+      <p>Discover interiors crafted for modern elegance.</p>
+    </div>
+
+    <swiper-container #swiperRef init="false" class="mySwiper">
+      <swiper-slide *ngFor="let room of roomItems">
+        <div class="room-card">
+          <div class="image-wrapper">
+            <img [src]="room.img" [alt]="room.name" loading="lazy">
+            <div class="overlay">
+              <div class="meta">
+                <span>{{ room.count }} Properties</span>
+                <h3>{{ room.name }}</h3>
+              </div>
+              <button class="arrow-btn">→</button>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>

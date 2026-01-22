@@ -1,0 +1,53 @@
+<div class="about-page">
+  <header class="about-hero">
+    <div class="container">
+      <h1>Redefining Modern Living</h1>
+      <p>Building a legacy of luxury and trust since 2010.</p>
+    </div>
+  </header>
+
+  <section class="story-section">
+    <div class="container grid-2">
+      <div class="image-side">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80" alt="Our Office">
+      </div>
+      <div class="text-side">
+        <span class="subtitle">Our Story</span>
+        <h2>Your Vision, Our Expertise</h2>
+        <p>Luminor Real Estate began with a simple idea: that finding a home should be as inspiring as living in one. We specialize in high-end properties that combine architectural excellence with functional design.</p>
+        <p>Our team of dedicated professionals works tirelessly to ensure every client finds their perfect sanctuary in the heart of the city.</p>
+      </div>
+    </div>
+  </section>   
+
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" *ngFor="let stat of stats">
+          <h3>{{ stat.value }}</h3>
+          <p>{{ stat.label }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container">
+      <div class="header-center">
+        <h2>Meet the Visionaries</h2>
+        <p>Expertise you can trust, service you can rely on.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card" *ngFor="let member of team">
+          <div class="img-box">
+            <img [src]="member.img" [alt]="member.name">
+          </div>
+          <div class="info">
+            <h3>{{ member.name }}</h3>
+            <span>{{ member.role }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

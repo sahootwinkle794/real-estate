@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "title": "Home", "path": "/" },
+    { "title": "About", "path": "/about" },
+    { "title": "Properties", "path": "/properties" },
+    { "title": "Contact", "path": "/contact" }
+  ]
+}

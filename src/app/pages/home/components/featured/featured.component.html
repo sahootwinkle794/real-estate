@@ -1,0 +1,31 @@
+<section class="featured-properties">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Properties</h2>
+      <p>Handpicked selections from our exclusive portfolio.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card" *ngFor="let item of properties">
+        <div class="image-box">
+          <img [src]="item.image" [alt]="item.title">
+          <span class="status" [ngClass]="item.status === 'For Sale' ? 'sale' : 'rent'">
+            {{ item.status }}
+          </span>
+        </div>
+        
+        <div class="details">
+          <h3 class="price">{{ item.price }}</h3>
+          <h4 class="title">{{ item.title }}</h4>
+          <p class="location">📍 {{ item.location }}</p>
+          
+          <div class="specs">
+            <span>{{ item.beds }} Beds</span>
+            <span>{{ item.baths }} Baths</span>
+            <span>{{ item.sqft }} sqft</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

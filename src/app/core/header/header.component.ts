@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   logo = 'https://luminor-eight.vercel.app/images/logo/logo.svg'; // Example logo
@@ -17,6 +17,7 @@ export class HeaderComponent {
     { title: 'Home', path: '/' },
     { title: 'Properties', path: '/properties' },
     { title: 'About Us', path: '/about' },
-    { title: 'Contact', path: '/contact' }
+    { title: 'Contact', path: '/contact' },
+    { title: 'Services', path: '/services' },
   ];
 }
